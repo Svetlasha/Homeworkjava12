@@ -11,7 +11,6 @@ public class MovieManager {
     }
 
 
-
     public void addMovie(String movie) {
         String[] tmp = new String[movies.length + 1];
         for (int i = 0; i < movies.length; i++) {
@@ -27,8 +26,8 @@ public class MovieManager {
 
     public String[] findLast() {
         int resultLength;
-        if ( limit <= movies.length ) {
-            resultLength = movies.length;
+        if (limit < movies.length) {
+            resultLength = limit;
         } else {
             resultLength = limit;
         }
